@@ -30,7 +30,8 @@ executable ElectricFieldSimulator
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
     build-depends:
-        base ^>=4.13.0.0, numeric-prelude == 0.4.3.3, repa == 3.4.1.4, 
-        vector == 0.12.3.0, fixed-vector == 1.2.0.0, dimensional == 1.3
+        base ^>=4.13.0.0, numeric-prelude, repa, 
+        vector, fixed-vector, dimensional,
+        gloss
     hs-source-dirs:   app
     default-language: Haskell2010

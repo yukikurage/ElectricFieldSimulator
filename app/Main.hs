@@ -4,16 +4,13 @@
 module Main where
 
 import           ElectricField
+import qualified Graphics.Gloss as Gloss
 import qualified Number.SI      as SI
 import           NumericPrelude
 
-data ElectricCharge = ElectricCharge {
-  ecA :: [SI.T Double Double],
-  ecV :: [SI.T Double Double],
-  ecX :: [SI.T Double Double],
-  ecQ :: SI.T Double Double
-}
--- ^ ecA : 加速度, ecV : 速度, ecX : 位置, ecQ : 電荷
+window :: Gloss.Display
+window = Gloss.InWindow "Hello World" (640, 480) (100, 100)
 
 main :: IO ()
-main = putStrLn "Hello, Haskell!"
+main = Gloss.display window Gloss.white
+  (Gloss.translate (-150) (-10) . Gloss.scale 0.5 0.5 $ Gloss.text "Hello world")
